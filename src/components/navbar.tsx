@@ -14,22 +14,6 @@ import {
   Bars3Icon,
 } from "@heroicons/react/24/solid";
 
-const NAV_MENU = [
-  {
-    name: "Page",
-    icon: RectangleStackIcon,
-  },
-  {
-    name: "Account",
-    icon: UserCircleIcon,
-  },
-  {
-    name: "Docs",
-    icon: CommandLineIcon,
-    href: "https://www.material-tailwind.com/docs/react/installation",
-  },
-];
-
 interface NavItemProps {
   children: React.ReactNode;
   href?: string;
@@ -39,6 +23,9 @@ function NavItem({ children, href }: NavItemProps) {
   return (
     <li>
       <Typography
+        placeholder={undefined}
+        onPointerEnterCapture={undefined}
+        onPointerLeaveCapture={undefined}
         as="a"
         href={href || "#"}
         target={href ? "_blank" : "_self"}
@@ -50,6 +37,10 @@ function NavItem({ children, href }: NavItemProps) {
       </Typography>
     </li>
   );
+}
+
+function redirectToTelegram() {
+  window.open('https://t.me/YourBotUsername', '_blank'); // Replace with your bot or group link
 }
 
 export function Navbar() {
@@ -67,26 +58,48 @@ export function Navbar() {
   }, []);
 
   return (
-    <MTNavbar shadow={false} fullWidth className="border-0 sticky top-0 z-50">
+    <MTNavbar
+      placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined}
+      shadow={false}
+      fullWidth
+      className="border-0 sticky top-0 z-50"
+    >
       <div className="container mx-auto flex items-center justify-between">
-        <Typography color="blue-gray" className="text-lg font-bold">
-          Material Tailwind
+        <Typography
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+          color="blue-gray"
+          className="text-lg font-bold"
+        >
+          Quality Car
         </Typography>
-        <ul className="ml-10 hidden items-center gap-8 lg:flex">
-          {NAV_MENU.map(({ name, icon: Icon, href }) => (
-            <NavItem key={name} href={href}>
-              <Icon className="h-5 w-5" />
-              {name}
-            </NavItem>
-          ))}
-        </ul>
         <div className="hidden items-center gap-2 lg:flex">
-          <Button variant="text">Log in</Button>
-          <a href="https://www.material-tailwind.com/blocks" target="_blank">
-            <Button color="gray">blocks</Button>
-          </a>
+          {/* <Button
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+            variant="text"
+          >
+            Log in
+          </Button> */}
+          {/* Telegram Chat Button */}
+          <Button
+            placeholder={undefined}
+            onPointerEnterCapture={undefined}
+            onPointerLeaveCapture={undefined}
+            onClick={redirectToTelegram}
+            color="blue"
+          >
+            Замовити
+          </Button>
         </div>
         <IconButton
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
           variant="text"
           color="gray"
           onClick={handleOpen}
@@ -101,19 +114,25 @@ export function Navbar() {
       </div>
       <Collapse open={open}>
         <div className="container mx-auto mt-3 border-t border-gray-200 px-2 pt-4">
-          <ul className="flex flex-col gap-4">
-            {NAV_MENU.map(({ name, icon: Icon, href }) => (
-              <NavItem key={name} href={href}>
-                <Icon className="h-5 w-5" />
-                {name}
-              </NavItem>
-            ))}
-          </ul>
           <div className="mt-6 mb-4 flex items-center gap-2">
-            <Button variant="text">Log in</Button>
-            <a href="https://www.material-tailwind.com/blocks" target="_blank">
-              <Button color="gray">blocks</Button>
-            </a>
+            {/* <Button
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              variant="text"
+            >
+              Log in
+            </Button> */}
+            {/* Telegram Chat Button for Mobile View */}
+            <Button
+              placeholder={undefined}
+              onPointerEnterCapture={undefined}
+              onPointerLeaveCapture={undefined}
+              onClick={redirectToTelegram}
+              color="blue"
+            >
+              Замовити
+            </Button>
           </div>
         </div>
       </Collapse>

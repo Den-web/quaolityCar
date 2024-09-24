@@ -26,8 +26,12 @@ import {
     offPrice,
   }: BookCardProps) {
     return (
-      <Card color="transparent" shadow={false}>
-        <CardHeader color="gray" floated={false} className="mx-0 mt-0 mb-6">
+      <Card placeholder={undefined}
+      onPointerEnterCapture={undefined}
+      onPointerLeaveCapture={undefined} color="transparent" shadow={false}>
+        <CardHeader placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined} color="gray" floated={false} className="mx-0 mt-0 mb-6">
           <Image
             width={768}
             height={768}
@@ -36,12 +40,18 @@ import {
             className="h-full w-full scale-[1.1] object-cover object-center"
           />
         </CardHeader>
-        <CardBody className="p-0">
-          <Typography color="blue" className="mb-2 text-xs !font-semibold">
+        <CardBody placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined} className="p-0">
+          <Typography placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined} color="blue" className="mb-2 text-xs !font-semibold">
             {category}
           </Typography>
           <a href="#">
-            <Typography
+            <Typography placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
               variant="h5"
               color="blue-gray"
               className="mb-3 font-bold normal-case xl:w-64"
@@ -49,18 +59,24 @@ import {
               {title}
             </Typography>
           </a>
-          <Typography className="mb-4 font-normal !text-gray-500">
+          <Typography placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined} className="mb-4 font-normal !text-gray-500">
             {desc}
           </Typography>
           <div className="flex gap-2">
-            <Typography
+            <Typography placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}
               variant="h5"
               color="blue-gray"
               className={offPrice ? "line-through" : ""}
             >
               {price}
             </Typography>
-            <Typography variant="h5" color="red">
+            <Typography placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined} variant="h5" color="red">
               {offPrice}
             </Typography>
           </div>

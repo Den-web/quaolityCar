@@ -3,6 +3,23 @@
 import Image from "next/image";
 import { Typography, Carousel } from "@material-tailwind/react";
 
+const CarouselContent = [
+  {
+    title: "Коли починається і закінчується кампанія «Автопідбір»?",
+    desc: "Не потрібно турбуватися про пошук автомобіля. Замовляйте онлайн, і ми перевіримо ваш обраний автомобіль та доставимо до вас.",
+    tag: "Безкозкштовна доставка",
+  },
+  {
+    title: "Які автомобілі ви можете допомогти підібрати?",
+    desc: "Не потрібно турбуватися про пошук автомобіля. Замовляйте онлайн, і ми перевіримо ваш обраний автомобіль та доставимо до вас.",
+    tag: "Безкозкштовна доставка",
+  },
+  {
+    title: "Чи є у вас знижки на послуги автопідбору?",
+    desc: "Не потрібно турбуватися про пошук автомобіля. Замовляйте онлайн, і ми перевіримо ваш обраний автомобіль та доставимо до вас.",
+    tag: "Безкозкштовна доставка",
+  }, 
+];
 
 export function CarouselFeatures() {
   return (
@@ -17,16 +34,15 @@ export function CarouselFeatures() {
               {new Array(length).fill("").map((_, i) => (
                 <span
                   key={i}
-                  className={`block h-1 w-10 cursor-pointer transition-all content-[''] ${
-                    activeIndex === i ? "bg-white" : "bg-white/50"
-                  }`}
-                  onClick={() => setActiveIndex(i)}
-                />
+                  className={`block h-1 w-10 cursor-pointer transition-all content-[''] ${activeIndex === i ? "bg-white" : "bg-white/50"}`}
+                  onClick={() => setActiveIndex(i)} />
               ))}
             </div>
           )}
-        >
-          {new Array(2).fill("").map((_, i) => (
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}>
+          {CarouselContent.map((_, i) => (
             <div
               key={i}
               className="!relative flex grid-cols-1 flex-col-reverse gap-6 px-10 py-14 md:grid md:grid-cols-5  md:gap-14 md:py-20"
@@ -36,11 +52,11 @@ export function CarouselFeatures() {
                   variant="lead"
                   color="white"
                   className="mb-5 text-xl font-normal "
-                >
-                  Easy Shopping, Quick Delivery <br />
-                  No need to stress about shopping for books. Order online and
-                  have your textbooks and supplies delivered straight to your
-                  doorstep for free.
+                  placeholder={undefined}
+                  onPointerEnterCapture={undefined}
+                  onPointerLeaveCapture={undefined}>
+                  {_.title} <br />
+                  {_.desc}
                 </Typography>
                 <div className="flex items-center gap-2">
                   🚚
@@ -48,8 +64,11 @@ export function CarouselFeatures() {
                     variant="small"
                     color="white"
                     className="font-medium uppercase"
+                    placeholder={undefined}
+                    onPointerEnterCapture={undefined}
+                    onPointerLeaveCapture={undefined}
                   >
-                    Free Delivery
+                    {_.tag} 
                   </Typography>
                 </div>
               </div>
@@ -57,7 +76,7 @@ export function CarouselFeatures() {
                 <Image
                   width={768}
                   height={768}
-                  src="/image/logos/logo-amazon 3.svg"
+                  src="/image/logos/quaolity-car.png"
                   alt="testimonial image"
                   className="h-full w-2/4 object-contain md:!w-2/3"
                 />

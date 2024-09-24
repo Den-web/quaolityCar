@@ -12,52 +12,36 @@ import BookCard from "@/components/book-card";
 
 const BOOKS = [
   {
-    img: `/image/books/RectangleBig1.svg`,
-    category: "Natasha Wing",
-    title: "The Night Before Kindergarten",
-    desc: "A heartwarming and humorous picture book that eases the jitters of starting kindergarten.",
-    price: "$99",
-    offPrice: "$79",
+    img: `/image/books/4car.png`,
+    category: "Підбір під ключ",
+    title: "Підбір під ключ Фірмовий",
+    desc: "До цієї послуги включено: До 6 переглядів автомобілів наданих у продажу в нашому регіоні",
+    price: "від 450euro",
+    // offPrice: "$79",
   },
   {
-    img: `/image/books/RectangleBig6.svg`,
-    category: "James Patterson",
-    title: "Middle School: The Worst Years of My Life",
-    desc: "A funny and relatable novel about the challenges of navigating middle school.",
-    price: "$99",
-    offPrice: "$79",
+    img: `/image/books/3car.png`,
+    category: "Підбір під ключ",
+    title: "Підбір під ключ Базовий",
+    desc: "До цієї послуги включено: Супровід і консультації нашого експерта та онлайн підтримка у мессенджерах",
+    price: "від 450euro",
+    // offPrice: "$79",
   },
   {
-    img: `/image/books/RectangleBig2.svg`,
-    category: "Helen W. Colby",
-    title: "College Student: A Comprehensive Checklist",
-    desc: "A practical guidebook that helps college students prepare for the transition to university.",
-    price: "$99",
-    offPrice: "$79",
+    img: `/image/books/2car.png`,
+    category: "Разовий огляд",
+    title: "Разовий огляд автомобіля",
+    desc: "Ця послуга включає дослідження обраного Вами автомобіля перед покупкою.",
+    price: "від 100 - 150euro.",
+    // offPrice: "$79",
   },
   {
-    img: `/image/books/RectangleBig3.svg`,
-    category: "Walter Pauk",
-    title: "How to Study in College",
-    desc: "A valuable resource for high school seniors and college freshmen, offering effective study strategies.",
-    price: "$99",
-    offPrice: "$79",
-  },
-  {
-    img: `/image/books/RectangleBig4.svg`,
-    category: "William Strunk Jr.",
-    title: "The Elements of Style",
-    desc: "A classic reference book on grammar and writing skills, essential for high school and college students.",
-    price: "$99",
-    offPrice: "$79",
-  },
-  {
-    img: `/image/books/RectangleBig5.svg`,
-    category: "William Strunk Jr.",
-    title: "The Elements of Style",
-    desc: "A classic reference book on grammar and writing skills, essential for high school and college students.",
-    price: "$99",
-    offPrice: "$79",
+    img: `/image/books/1car.png`,
+    category: "Оцінка авто",
+    title: "Оцінка авто перед продажем",
+    desc: "Оцінка стану автомобіля (Не формування його вартості)",
+    price: "50euro",
+    // offPrice: "$79",
   },
 ];
 
@@ -76,58 +60,42 @@ export function BackToSchoolBooks() {
   return (
     <section className="px-8 pt-20 pb-10">
       <div className="container mx-auto mb-20 text-center">
-        <Typography
-          variant="paragraph"
+        <Typography 
+          variant="h1"
           color="blue-gray"
-          className="mb-3 font-bold uppercase"
-        >
-          up to 40% OFF
-        </Typography>
-        <Typography variant="h1" color="blue-gray" className="mb-2">
-          Back-to-School Books
+          className="mb-2"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}>
+          Послуги якi ми надаемо
         </Typography>
         <Typography
           variant="lead"
           className="mx-auto w-full px-4 !text-gray-500 lg:w-9/12"
-        >
-          We offer a wide range of study guides, test prep materials, and
-          reference books. Whether you&apos;re tackling calculus or diving into
-          Shakespeare, we&apos;ve got you covered.
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}>
+          Ми пропонуємо широкий вибір посібників по автомобілях, 
+          аналітичних звітів ринку та інструментів порівняння. 
+          Чи досліджуєте ви паливну ефективність, чи оцінюєте розкішні функції, 
+          у нас є всі ресурси, які вам знадобляться.
         </Typography>
-        <div className="mt-20 flex items-center justify-center">
-          <Tabs value={activeTab} className="w-full lg:w-8/12">
-            <TabsHeader
-              className="h-12 bg-transparent"
-              indicatorProps={{
-                className: "!bg-gray-900 rounded-lg",
-              }}
-            >
-              {BOOKS_TABS.map((book) => (
-                <Tab
-                  key={book}
-                  value={book}
-                  className={`!font-medium capitalize transition-all duration-300
-                    ${activeTab === book ? "text-white" : "capitalize"}
-                  `}
-                  onClick={() => setActiveTab(book)}
-                >
-                  {book}
-                </Tab>
-              ))}
-            </TabsHeader>
-          </Tabs>
-        </div>
       </div>
-      <div className="container mx-auto grid grid-cols-1 items-start gap-x-6 gap-y-20 md:grid-cols-2 xl:grid-cols-3">
+      <div className="container mx-auto grid grid-cols-2 items-start gap-x-6 gap-y-20 md:grid-cols-2 xl:grid-cols-4">
         {BOOKS.map((props, key) => (
           <BookCard key={key} {...props} />
         ))}
       </div>
-      <div className="grid place-items-center">
-        <Button className="mt-32" variant="outlined">
+      {/* <div className="grid place-items-center">
+        <Button 
+          className="mt-32"
+          variant="outlined"
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}>
           Show more
         </Button>
-      </div>
+      </div> */}
     </section>
   );
 }

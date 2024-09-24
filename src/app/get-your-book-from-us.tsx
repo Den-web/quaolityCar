@@ -12,21 +12,21 @@ import {
 const FEATURES = [
   {
     icon: BanknotesIcon,
-    title: "We Support Educators",
+    title: "Зберегти грощi",
     description:
-      "Explore our educator resources, bulk ordering options, and special teacher discounts.",
+      "Спiвпраця з нами збереже ваш бюджет шляхом торгу з продавцем окупить вартiсть послуги пiдбору",
   },
   {
     icon: LifebuoyIcon,
-    title: "Support 24/7",
+    title: "Пiдтримка 24/7",
     description:
-      "Our dedicated customer support team is available to assist you 24 hours a day, 7 days a week.",
+      "З нами ви зможете отримати допомогу та консультацii по подальшому обслуговуванню авто.",
   },
   {
     icon: TruckIcon,
-    title: "Easy Shopping, Quick Delivery",
+    title: "Зручні покупки, швидка доставка",
     description:
-      "We offer fast and reliable shipping, so you can focus on what matters most - your education",
+      "З нами ваи зможете зберегти час та грошi при пошуку авто в також дicтатися до авто в швидкi строки",
   },
 ];
 
@@ -34,18 +34,10 @@ export function GetYourBookFromUs() {
   return (
     <section className="px-8">
       <div className="container mx-auto mb-16 text-center">
-        <Typography variant="h2" color="blue-gray" className="mb-4">
-          Get your book from us!
-        </Typography>
-        <Typography
-          variant="lead"
-          className="mx-auto w-full px-4 !text-gray-500 lg:w-5/12"
-        >
-          Start your literary adventure today by exploring these captivating
-          worlds of words.
-        </Typography>
+        Замовляйте послугу пiдбору та знайдiть свое авто з нами! 
+        З нами ви отримаете переваги для себе такі як
       </div>
-      <div className="container mx-auto grid grid-cols-1 gap-y-12 md:grid-cols-2 lg:grid-cols-3">
+      <div className="container mx-auto grid grid-cols-1 gap-y-12 md:grid-cols-3 lg:grid-cols-3">
         {FEATURES.map(({ icon, title, description }) => (
           <FeatureCard key={title} icon={icon} title={title}>
             {description}
