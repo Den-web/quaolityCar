@@ -77,14 +77,15 @@ export function Navbar() {
           Quality Car
         </Typography>
         <div className="hidden items-center gap-2 lg:flex">
-          {/* <Button
-            placeholder={undefined}
-            onPointerEnterCapture={undefined}
-            onPointerLeaveCapture={undefined}
-            variant="text"
-          >
-            Log in
-          </Button> */}
+        <Typography
+          placeholder={undefined}
+          onPointerEnterCapture={undefined}
+          onPointerLeaveCapture={undefined}
+          color="blue-gray"
+          className="text-md font-light mr-3"
+        >
+           Tel: +385 99 7572 031
+          </Typography>
           {/* Telegram Chat Button */}
           <Button
             placeholder={undefined}

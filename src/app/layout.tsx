@@ -1,7 +1,10 @@
+// app/layout.tsx or app/RootLayout.tsx
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+
 import { Layout } from "@/components";
+import Script from 'next/script';
 
 const roboto = Roboto({
   subsets: ["latin"],
@@ -23,11 +26,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        <script
-          defer
-          data-site="YOUR_DOMAIN_HERE"
-          src="https://api.nepcha.com/js/nepcha-analytics.js"
-        ></script>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
       </head>
       <body className={roboto.className}>

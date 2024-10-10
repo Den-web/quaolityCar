@@ -7,24 +7,27 @@ const CarouselContent = [
   {
     title: "Коли починається і закінчується кампанія «Автопідбір»?",
     desc: "Не потрібно турбуватися про пошук автомобіля. Замовляйте онлайн, і ми перевіримо ваш обраний автомобіль та доставимо до вас.",
-    tag: "Безкозкштовна доставка",
+    tag: "Безкоштовна доставка",
+    src: "/image/logos/quaolity-car.png"
   },
   {
-    title: "Які автомобілі ви можете допомогти підібрати?",
-    desc: "Не потрібно турбуватися про пошук автомобіля. Замовляйте онлайн, і ми перевіримо ваш обраний автомобіль та доставимо до вас.",
-    tag: "Безкозкштовна доставка",
+    title: "Які марки автомобілів ви перевіряєте?",
+    desc: "Ми надаємо послуги з перевірки автомобілів всіх основних брендів, включаючи седани, позашляховики, електромобілі та гібриди.",
+    tag: "Широкий вибір марок",
+    src: "/image/logos/preview1 .png"
   },
   {
-    title: "Чи є у вас знижки на послуги автопідбору?",
-    desc: "Не потрібно турбуватися про пошук автомобіля. Замовляйте онлайн, і ми перевіримо ваш обраний автомобіль та доставимо до вас.",
-    tag: "Безкозкштовна доставка",
-  }, 
+    title: "Як працює процес автопідбору?",
+    desc: "Наші експерти спочатку обговорюють з вами вимоги, а потім підбирають варіанти автомобілів, які відповідають вашим критеріям. Ви отримуєте звіт із детальною перевіркою кожного авто.",
+    tag: "Професійна консультація",
+    src: "/image/logos/preview2.png"
+  },
 ];
 
 export function CarouselFeatures() {
   return (
     <div className="px-8 py-56">
-      <section className="container mx-auto !rounded-lg bg-[url('/image/Background.png')] bg-center py-10 lg:px-16">
+      <section id="blog" className="container mx-auto !rounded-lg bg-[url('/image/Background.png')] bg-center py-10 lg:px-16">
         <Carousel
           transition={{ duration: 1 }}
           nextArrow={() => <></>}
@@ -76,7 +79,7 @@ export function CarouselFeatures() {
                 <Image
                   width={768}
                   height={768}
-                  src="/image/logos/quaolity-car.png"
+                  src={_.src}
                   alt="testimonial image"
                   className="h-full w-2/4 object-contain md:!w-2/3"
                 />

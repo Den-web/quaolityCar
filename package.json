@@ -15,6 +15,7 @@
     "@heroicons/react": "2.0.18",
     "@material-tailwind/react": "2.1.2",
     "next": "^14.2.8",
+    "nextjs-google-analytics": "^2.3.7",
     "react": "18",
     "react-dom": "18",
     "sharp": "^0.33.5"

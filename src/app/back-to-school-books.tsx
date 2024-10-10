@@ -16,7 +16,7 @@ const BOOKS = [
     category: "Підбір під ключ",
     title: "Підбір під ключ Фірмовий",
     desc: "До цієї послуги включено: До 6 переглядів автомобілів наданих у продажу в нашому регіоні",
-    price: "від 450euro",
+    price: "від 450€",
     // offPrice: "$79",
   },
   {
@@ -24,7 +24,7 @@ const BOOKS = [
     category: "Підбір під ключ",
     title: "Підбір під ключ Базовий",
     desc: "До цієї послуги включено: Супровід і консультації нашого експерта та онлайн підтримка у мессенджерах",
-    price: "від 450euro",
+    price: "від 450€",
     // offPrice: "$79",
   },
   {
@@ -32,7 +32,7 @@ const BOOKS = [
     category: "Разовий огляд",
     title: "Разовий огляд автомобіля",
     desc: "Ця послуга включає дослідження обраного Вами автомобіля перед покупкою.",
-    price: "від 100 - 150euro.",
+    price: "від 100 - 150€.",
     // offPrice: "$79",
   },
   {
@@ -40,7 +40,7 @@ const BOOKS = [
     category: "Оцінка авто",
     title: "Оцінка авто перед продажем",
     desc: "Оцінка стану автомобіля (Не формування його вартості)",
-    price: "50euro",
+    price: "50€",
     // offPrice: "$79",
   },
 ];
@@ -58,7 +58,7 @@ export function BackToSchoolBooks() {
   const [activeTab, setActiveTab] = React.useState("history");
 
   return (
-    <section className="px-8 pt-20 pb-10">
+    <section id="press" className="px-8 pt-20 pb-10">
       <div className="container mx-auto mb-20 text-center">
         <Typography 
           variant="h1"

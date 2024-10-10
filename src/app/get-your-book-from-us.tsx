@@ -32,7 +32,7 @@ const FEATURES = [
 
 export function GetYourBookFromUs() {
   return (
-    <section className="px-8">
+    <section id="pricing" className="px-8">
       <div className="container mx-auto mb-16 text-center">
         Замовляйте послугу пiдбору та знайдiть свое авто з нами! 
         З нами ви отримаете переваги для себе такі як

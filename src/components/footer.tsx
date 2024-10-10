@@ -1,8 +1,12 @@
 import { Typography, Button, Input } from "@material-tailwind/react";
 
 const LINKS = ["About Us", "Careers", "Press", "Blog", "Pricing"];
-const SUB_LINKS = ["Claim", "Privacy", "Terms"];
+// const SUB_LINKS = ["Claim", "Privacy", "Terms"];
 const CURRENT_YEAR = new Date().getFullYear();
+
+function redirectToTelegram() {
+  window.open('https://t.me/YourBotUsername', '_blank'); // Replace with your bot or group link
+}
 
 export function Footer() {
   return (
@@ -23,22 +27,25 @@ export function Footer() {
               Quality Car
             </Typography>
             <ul className="flex flex-wrap items-center justify-center md:justify-start">
-              {LINKS.map((link, idx) => (
-                <li key={link}>
-                  <Typography
-                    placeholder={undefined}
-                    onPointerEnterCapture={undefined}
-                    onPointerLeaveCapture={undefined}
-                    as="a"
-                    href="#"
-                    className={`py-1 font-medium !text-gray-700 transition-colors hover:!text-gray-900 ${
-                      idx === 0 ? "pr-3" : "px-3"
-                    }`}
-                  >
-                    {link}
-                  </Typography>
-                </li>
-              ))}
+              {LINKS.map((link, idx) => {
+                const linkId = link.toLowerCase().replace(/\s+/g, ""); // Example: "About Us" -> "aboutus"
+                return (
+                  <li key={link}>
+                    <Typography
+                      placeholder={undefined}
+                      onPointerEnterCapture={undefined}
+                      onPointerLeaveCapture={undefined}
+                      as="a"
+                      href={`#${linkId}`} // Generates href="#about", "#services", etc.
+                      className={`py-1 font-medium !text-gray-700 transition-colors hover:!text-gray-900 ${
+                        idx === 0 ? "pr-3" : "px-3"
+                      }`}
+                    >
+                      {link}
+                    </Typography>
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="w-full sm:w-[24rem] sm:min-w-[24rem]">
@@ -56,8 +63,9 @@ export function Footer() {
                 placeholder={undefined}
                 onPointerEnterCapture={undefined}
                 onPointerLeaveCapture={undefined}
-               color="gray" className="flex-shrink-0">
-                subscribe
+                onClick={redirectToTelegram}
+                color="gray" className="flex-shrink-0">
+                замовити
               </Button>
             </div>
           </div>
@@ -68,35 +76,8 @@ export function Footer() {
             onPointerEnterCapture={undefined}
             onPointerLeaveCapture={undefined}
            className="text-center font-normal !text-gray-700">
-            &copy; {CURRENT_YEAR} Made with{" "}
-            <a href="https://www.material-tailwind.com" target="_blank">
-              Material Tailwind
-            </a>{" "}
-            by{" "}
-            <a href="https://www.creative-tim.com" target="_blank">
-              Creative Tim
-            </a>
-            .
+            &copy; {CURRENT_YEAR} Made {" "}for QuolityCar.
           </Typography>
-
-          <ul className="flex items-center">
-            {SUB_LINKS.map((link, idx) => (
-              <li key={link}>
-                <Typography
-                  placeholder={undefined}
-                  onPointerEnterCapture={undefined}
-                  onPointerLeaveCapture={undefined}
-                  as="a"
-                  href="#"
-                  className={`py-1 font-normal !text-gray-700 transition-colors hover:!text-gray-900 ${
-                    idx === SUB_LINKS.length - 1 ? "pl-2" : "px-2"
-                  }`}
-                >
-                  {link}
-                </Typography>
-              </li>
-            ))}
-          </ul>
         </div>
       </div>
     </footer>
