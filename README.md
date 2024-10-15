@@ -1,14 +1,6 @@
-# [NextJS Tailwind Campaign Page](http://demos.creative-tim.com/nextjs-tailwind-campaign-page?ref=readme-ntpp) [![Tweet](https://img.shields.io/twitter/url/http/shields.io.svg?style=social&logo=twitter)](https://twitter.com/intent/tweet?url=https://www.creative-tim.com/product/nextjs-tailwind-campaign-page&text=Check%20Material%20Tailwind%202%20Template%20made%20by%20@CreativeTim%20#webdesign%20#template%20#materialdesign%20#react%20https://www.creative-tim.com/product/nextjs-tailwind-campaign-page)
+# [Quolity Car Company]
 
-![version](https://img.shields.io/badge/version-1.0.0-blue.svg) [![GitHub issues open](https://img.shields.io/github/issues/creativetimofficial/nextjs-tailwind-campaign-page.svg)](https://github.com/creativetimofficial/nextjs-tailwind-campaign-page/issues?q=is%3Aopen+is%3Aissue) [![GitHub issues closed](https://img.shields.io/github/issues-closed-raw/creativetimofficial/nextjs-tailwind-campaign-page.svg)](https://github.com/creativetimofficial/nextjs-tailwind-campaign-page/issues?q=is%3Aissue+is%3Aclosed)
-
-![Image](https://s3.amazonaws.com/creativetim_bucket/products/743/original/material-tailwind-react-campaign-template-thumbnail.jpg?1697631625)
-
-Introducing Tailwind Campaign Page, an all-inclusive and visually captivating campaign landing page template built on the foundation of Tailwind CSS and Material Tailwind.
-
-Are you searching for a meticulously designed and highly customizable campaign landing page template tailored for marketers, businesses, and organizations to create compelling and effective online campaign pages? Look no further! We are excited to present to you our Free Campaign Page Template, thoughtfully crafted to meet the needs of web developers like you.
-
-This template, built with Tailwind CSS and Material Tailwind, offers seamless customization to perfectly match your campaign's branding. The free campaign template comes equipped with essential features such as header, product listing, categories, and testimonial section.
+Introducing Quolity Car Company, captivating compaign landing page.
 
 **Documentation built by Developers**
 
