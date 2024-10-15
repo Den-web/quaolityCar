@@ -13,9 +13,9 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: "Quolity Car Campany",
+  title: "Quolity Car Company",
   description:
-    "Introducing Quolity Car Campaign, captivating campaign landing page.",
+    "Introducing Quolity Car Company, captivating compaign landing page.",
 };
 
 export default function RootLayout({
@@ -27,6 +27,9 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <meta property="og:title" content="Quolity Car Company" />
+        <meta property="og:description" content="Introducing Quolity Car Company, captivating compaign landing page." />
+        <meta property="og:type" content="QuolityCar" />
       </head>
       <body className={roboto.className}>
         <Layout>
