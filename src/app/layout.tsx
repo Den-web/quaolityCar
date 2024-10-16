@@ -27,9 +27,16 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="shortcut icon" href="/favicon.png" type="image/png" />
+        <meta name="description" content="Introducing Quolity Car Company, captivating compaign landing page.." />
         <meta property="og:title" content="Quolity Car Company" />
         <meta property="og:description" content="Introducing Quolity Car Company, captivating compaign landing page." />
-        <meta property="og:type" content="QuolityCar" />
+        {/* <meta property="og:image" content="https://example.com/my-image.jpg" /> */}
+        <meta property="og:url" content="https://quaolity-car.vercel.app/" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Quolity Car Company" />
+        <meta name="twitter:description" content="Introducing Quolity Car Company, captivating compaign landing page." />
+        {/* <meta name="twitter:image" content="https://example.com/my-image.jpg" /> */}
+      
       </head>
       <body className={roboto.className}>
         <Layout>
