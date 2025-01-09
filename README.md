@@ -73,14 +73,103 @@ If you have questions or need help integrating the product please [contact us](h
 
 - [Affiliate Program](https://www.creative-tim.com/affiliates/new?ref=readme-ntpp) (earn money)
 
-##### Social Media
 
-Twitter: <https://twitter.com/CreativeTim>
 
-Facebook: <https://www.facebook.com/CreativeTim>
+# Atomic Design Folder Structure for React
 
-Dribbble: <https://dribbble.com/creativetim>
+This document outlines the folder structure for a React project using Atomic Design principles.
 
-Google+: <https://plus.google.com/+CreativetimPage>
+## Folder Structure
 
-Instagram: <https://instagram.com/creativetimofficial>
+```plaintext
+src/
+├── assets/                     # Static assets like images, fonts, and icons
+│   ├── images/
+│   ├── fonts/
+│   ├── icons/
+├── components/                 # Atomic Design Layers
+│   ├── atoms/                  # Small, reusable components (e.g., buttons, inputs)
+│   │   ├── Button/
+│   │   │   ├── Button.jsx
+│   │   │   ├── Button.css
+│   │   │   └── Button.test.jsx
+│   │   └── Input/
+│   ├── molecules/              # Combinations of atoms (e.g., forms, cards)
+│   │   ├── Form/
+│   │   │   ├── Form.jsx
+│   │   │   ├── Form.css
+│   │   │   └── Form.test.jsx
+│   │   └── Card/
+│   ├── organisms/              # Groups of molecules forming sections (e.g., navbar)
+│   │   ├── Header/
+│   │   │   ├── Header.jsx
+│   │   │   ├── Header.css
+│   │   │   └── Header.test.jsx
+│   │   └── Footer/
+│   ├── templates/              # Page templates defining structure
+│   │   ├── HomeTemplate.jsx
+│   │   ├── AboutTemplate.jsx
+│   │   └── index.js
+├── pages/                      # Pages combining templates and data
+│   ├── Home/
+│   │   ├── Home.jsx
+│   │   ├── Home.css
+│   │   └── Home.test.jsx
+│   └── About/
+├── contexts/                   # Contexts for managing global state
+│   ├── ThemeContext.jsx
+│   └── AuthContext.jsx
+├── hooks/                      # Custom React hooks
+│   ├── useAuth.jsx
+│   └── useFetch.jsx
+├── services/                   # API services and logic (Axios, etc.)
+│   ├── api.js
+│   └── authService.js
+├── styles/                     # Shared styles
+│   ├── variables.css
+│   ├── mixins.css
+│   └── global.css
+├── utils/                      # Utility functions/helpers
+│   ├── formatDate.js
+│   └── validateForm.js
+├── App.jsx                     # Main App component
+├── index.js                    # App entry point
+└── routes/                     # Route definitions and configurations
+    ├── AppRoutes.jsx
+    └── PrivateRoute.jsx
+```
+
+## Explanation of Folders
+
+1. **assets/**:
+   - Static files such as images, fonts, and icons.
+
+2. **components/**:
+   - **atoms/**: Smallest building blocks like buttons or text inputs.
+   - **molecules/**: Combinations of atoms with logic.
+   - **organisms/**: Larger UI structures combining molecules.
+   - **templates/**: Define page layout and structure, combining organisms.
+
+3. **pages/**:
+   - Final pages tied to specific routes.
+
+4. **contexts/**:
+   - Global React Contexts for shared state (e.g., authentication).
+
+5. **hooks/**:
+   - Custom hooks for reusable logic.
+
+6. **services/**:
+   - API and business logic layers.
+
+7. **styles/**:
+   - Centralized styling files.
+
+8. **utils/**:
+   - Generic helper functions or utilities.
+
+---
+
+This structure adheres to Atomic Design principles, ensuring scalability, maintainability, and reusability across the project.
+
+
