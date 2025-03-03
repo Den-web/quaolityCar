@@ -40,7 +40,7 @@ function NavItem({ children, href }: NavItemProps) {
 }
 
 function redirectToTelegram() {
-  window.open('https://t.me/@denweb1', '_blank'); // Replace with your bot or group link
+  window.open('https://t.me/denweb1', '_blank'); // Replace with your bot or group link
 }
 
 export function Navbar() {
