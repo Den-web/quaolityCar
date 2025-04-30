@@ -2,6 +2,7 @@
 import "./globals.css";
 import type { Metadata } from "next";
 import { Roboto } from "next/font/google";
+import { Analytics } from "@vercel/analytics/react";
 
 import { Layout } from "@/components";
 import Script from 'next/script';
@@ -42,6 +43,7 @@ export default function RootLayout({
         <Layout>
           {children}
         </Layout>
+        <Analytics />
       </body>
     </html>
   );
